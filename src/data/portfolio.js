@@ -41,13 +41,14 @@ export const snapshot = [
 export const about = {
   paragraphs: [
     "I'm a B.Tech Information Technology student at Ajay Kumar Garg Engineering College, currently in my 4th year with a CGPA of 7.8 / 10. My main interests are full-stack web development, real-time applications, and the engineering behind software that holds up under real use.",
-    "I've built and deployed MERN-stack applications on Vercel and Render, including a real-time chat app with Socket.io and an AI-assisted mock interview platform. I'm preparing for software engineering roles through DSA practice, core CS subjects, and mock interviews, and I pick up new tools quickly when a project needs them.",
+    "For my Final Year Major Project, I engineered ResearchMind — an evidence-grounded AI-powered multi-agent research platform that combines Graph-RAG over a Temporal Citation Knowledge Graph (TCKG) and PyTorch R-GCN link prediction to automate scientific literature review and research gap discovery.",
+    "I've built and deployed distributed applications on Vercel and Render, including real-time systems and AI microservices. I'm preparing for software engineering roles through DSA practice, core CS subjects, and mock interviews, and I pick up new tools quickly when a project needs them.",
   ],
   facts: [
-    { label: 'Focus', value: 'Full stack development, backend APIs, real-time systems' },
-    { label: 'Currently', value: 'Preparing for software engineering placements' },
+    { label: 'Focus', value: 'Full stack development, backend APIs, multi-agent AI' },
+    { label: 'Major Project', value: 'ResearchMind (Multi-Agent Graph-RAG Discovery)' },
     { label: 'Deployed on', value: 'Vercel and Render' },
-    { label: 'Exploring', value: 'AI fundamentals and LLM application design' },
+    { label: 'Exploring', value: 'Graph-RAG, Temporal KGs, & AI agent architectures' },
   ],
 };
 
@@ -163,6 +164,41 @@ export const projects = [
       'AI feedback currently uses a simulated scoring system rather than a production LLM integration.',
     github: 'https://github.com/harshitkushwaha45/AI_MOCK_INTERVIEW_PLATFORM',
     live: 'https://ai-mock-interview-platform-1-ofb2.onrender.com',
+  },
+  {
+    id: 'research-mind',
+    name: 'ResearchMind: AI-Powered Multi-Agent Research Assistant',
+    summary:
+      'Final Year Major Project: An evidence-grounded scientific research discovery platform that orchestrates 6 cooperating AI agents, Graph-RAG over a Temporal Citation Knowledge Graph (TCKG), and PyTorch R-GCN link prediction to uncover cross-domain research hypotheses.',
+    features: [
+      '6 Cooperating AI Agents orchestrating paper retrieval, classification, graph construction, synthesis, gap detection, and hypothesis ranking',
+      'Persistent Temporal Citation Knowledge Graph (TCKG) in Neo4j and MongoDB Atlas with chronological paper lineage',
+      'Graph-RAG architecture fusing 384-dim dense embeddings (all-MiniLM-L6-v2) with multi-hop topological graph walks',
+      'PyTorch Relational Graph Convolutional Network (R-GCN) link predictor hosted on dedicated ML microservice',
+      'Explainable dual-scoring (Composite Rank vs RGCS) and historical backtesting benchmark (≤ 2021 → 2022-2024)',
+    ],
+    tech: [
+      'React',
+      'Vite',
+      'Tailwind CSS',
+      'Node.js',
+      'Express.js',
+      'Python',
+      'PyTorch',
+      'R-GCN',
+      'Neo4j',
+      'MongoDB',
+      'Graph-RAG',
+      'MiniLM-L6-v2',
+      'Gemini API',
+    ],
+    github: 'https://github.com/harshitkushwaha45/-AAI-Powered-Multi-Agent-Research-Assistant-for-Literature-Review-and-Research-Gap-Identification',
+    live: 'https://aai-powered-multi-agent-research-as.vercel.app/',
+    backend: 'https://aai-powered-multi-agent-research.onrender.com',
+    backendLabel: 'Backend on Render',
+    mlServices: 'https://aai-powered-multi-agent-research-9rd0.onrender.com',
+    mlServicesLabel: 'ML Services on Render',
+    isMajorProject: true,
   },
 ];
 

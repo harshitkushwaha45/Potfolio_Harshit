@@ -7,7 +7,7 @@ export default function Projects() {
     <section id="projects" aria-labelledby="projects-heading" className="section-pad border-t border-line">
       <div className="container-x">
         <SectionTitle id="projects" title="Featured projects">
-          Two full-stack projects, built and deployed end to end.
+          Full-stack web applications and AI platforms, built and deployed end to end.
         </SectionTitle>
 
         <div className="space-y-10">

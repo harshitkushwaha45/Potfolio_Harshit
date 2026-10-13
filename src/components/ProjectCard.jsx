@@ -3,15 +3,26 @@ import Tag from './Tag.jsx';
 import { GithubIcon } from './Icons.jsx';
 
 export default function ProjectCard({ project }) {
-  const { id, name, summary, features, tech, github, live, backend, backendLabel, note } = project;
+  const { id, name, summary, features, tech, github, live, backend, backendLabel, mlServices, mlServicesLabel, isMajorProject, note } = project;
 
   return (
     <article
       aria-labelledby={`${id}-title`}
-      className="rounded-2xl border border-line bg-surface transition duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-2xl hover:shadow-black/15"
+      className={`rounded-2xl border bg-surface transition duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-2xl hover:shadow-black/15 ${
+        isMajorProject ? 'border-accent/30 ring-1 ring-accent/20' : 'border-line'
+      }`}
     >
       <div className="flex flex-col gap-6 p-6 sm:p-8">
         <div>
+          {isMajorProject && (
+            <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold text-accent ring-1 ring-accent/25">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75"></span>
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-accent"></span>
+              </span>
+              Final Year Major Project
+            </div>
+          )}
           <h3 id={`${id}-title`} className="font-display text-3xl font-semibold">
             {name}
           </h3>
@@ -51,9 +62,21 @@ export default function ProjectCard({ project }) {
               href={backend}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-muted underline-offset-4 transition hover:text-accent hover:underline"
+              className="inline-flex items-center gap-1 text-sm text-muted underline-offset-4 transition hover:text-accent hover:underline"
             >
               {backendLabel}
+              <ArrowUpRight size={13} aria-hidden="true" />
+            </a>
+          )}
+          {mlServices && (
+            <a
+              href={mlServices}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-sm text-muted underline-offset-4 transition hover:text-accent hover:underline"
+            >
+              {mlServicesLabel || 'ML Services on Render'}
+              <ArrowUpRight size={13} aria-hidden="true" />
             </a>
           )}
         </div>
